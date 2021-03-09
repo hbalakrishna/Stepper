@@ -1,0 +1,31 @@
+<!-- <mat-horizontal-stepper linear #stepper labelPosition="bottom">
+  <mat-step completed=true>
+    <ng-template matStepLabel>Get Started</ng-template>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Add your team</ng-template>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+  </mat-step>
+</mat-horizontal-stepper> -->
+<mat-horizontal-stepper linear #stepper labelPosition="bottom">
+  <div>{{tracks}}</div>
+  <ng-template matStepperIcon="edit">
+    <mat-icon></mat-icon>
+  </ng-template>
+  <ng-template matStepperIcon="number">
+    <mat-icon></mat-icon>
+  </ng-template>
+  <mat-step *ngFor="let steps of tracks; let i = index" [editable]="steps.editable">
+    <ng-template matStepLabel>{{steps.stepName}}</ng-template>
+    <div>
+      <button mat-button matStepperSkip (click)="skipHandler(i)">Skip</button>
+      <button mat-button matStepperNext (click)="completeHandler(i)">Complete</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
+
+<!-- Copyright 2018 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
