@@ -22,13 +22,19 @@ export class StepperErrorsExample implements OnInit {
     },
     {
       id: "bank",
-      stepName: "Add Bank",
+      stepName: "Link a bank account",
       completed: false,
       editable: false
     },
     {
       id: "payment",
-      stepName: "Payment",
+      stepName: "Schedule a payment",
+      completed: false,
+      editable: false
+    },
+        {
+      id: "sync",
+      stepName: "Sync accounting software",
       completed: false,
       editable: false
     }
