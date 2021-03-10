@@ -32,7 +32,7 @@ export class StepperErrorsExample implements OnInit {
       completed: false,
       editable: false
     },
-        {
+    {
       id: "sync",
       stepName: "Sync accounting software",
       completed: false,
@@ -56,7 +56,12 @@ export class StepperErrorsExample implements OnInit {
   completeHandler(index) {
     this.tracks[index].editable = false;
     this.tracks[index].completed = true;
-    console.log(this.tracks[index].completed);
+    console.log(this.tracks);
+  }
+
+  justTesting() {
+    // this.stepper.next();
+    // console.log(this.stepper.next);
   }
 }
 

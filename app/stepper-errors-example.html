@@ -9,7 +9,7 @@
     <ng-template matStepLabel>Done</ng-template>
   </mat-step>
 </mat-horizontal-stepper> -->
-<mat-horizontal-stepper linear #stepper labelPosition="bottom">
+<mat-horizontal-stepper linear #stepper labelPosition="bottom" (click)="justTesting()">
   <div>{{tracks}}</div>
   <ng-template matStepperIcon="edit">
     <mat-icon></mat-icon>
